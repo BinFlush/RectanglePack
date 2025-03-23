@@ -55,7 +55,6 @@ void FFS::undo() {
                 shelfUsed.pop_back();
                 shelfKs.pop_back();
                 rectID--;
-                std::cout << "undoing if1" << std::endl;
                 return;
             } else {
                 // this shelf has more than one rectangle. Delete the last rectangle
@@ -64,7 +63,6 @@ void FFS::undo() {
                 shelfUsed[i] -= used;
                 packing[i].pop_back();
                 rectID--;
-                std::cout << "undoing if2" << std::endl;
                 return;
             }
         }
