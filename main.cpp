@@ -127,9 +127,9 @@ int main(int argc, char* argv[]) {
 
 
     // Create SFML window for visualization
-    sf::RenderWindow window(sf::VideoMode({1130, 650}), "Rectangle Packing");
+    sf::RenderWindow window(sf::VideoMode({1130, 650}), "Rectangle Pack");
     sf::Font font;
-    if (!font.openFromFile("arial.ttf")) { // SFML 3 uses openFromFile
+    if (!font.openFromFile("Arimo-Regular.ttf")) { // SFML 3 uses openFromFile
         std::cerr << "Error loading font!" << std::endl;
         return -1;
     }
