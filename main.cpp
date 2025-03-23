@@ -139,7 +139,7 @@ int main(int argc, char* argv[]) {
     // Create SFML window for visualization
     sf::RenderWindow window(sf::VideoMode({1130, 650}), "Rectangle Pack");
     sf::Font font;
-    if (!font.openFromFile("Arimo-Regular.ttf")) { // SFML 3 uses loadFromFile
+    if (!font.openFromFile("Arimo-Regular.ttf")) { 
         std::cerr << "Error loading font!" << std::endl;
         return -1;
     }
@@ -154,7 +154,7 @@ int main(int argc, char* argv[]) {
     inputRect.setFillColor(sf::Color::Transparent);
     std::vector<double> rDelimiters = generateRSequence(r);
     bool undoing = false;
-    bool needsRedraw = true; // Flag to track if redraw is needed
+    bool needsRedraw = true; 
 
     // DRAWING VARIABLES DONE
 
@@ -195,7 +195,7 @@ int main(int argc, char* argv[]) {
                     nfdh.undo();
                     nfs.undo();
                     ffs.undo();
-                    undoing = true;
+                    undoing = true; // need this flag to avoid undoing twice for a single click.
                     needsRedraw = true; // Set flag to redraw
                 }
             } else if (!sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Backspace)) {
