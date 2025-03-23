@@ -37,8 +37,9 @@ g++ -o RectanglePack main.cpp FFDH.cpp FFS.cpp NFDH.cpp NFS.cpp -lsfml-graphics 
 After building the project, you can run the application using:
 
 ```bash
-./RectanglePack
+./RectanglePack 0.5
 ```
+Replace `0.5` with the desired packing ratio r (0<r<1).
 
 ## Usage
 
